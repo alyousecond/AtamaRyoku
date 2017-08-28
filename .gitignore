@@ -1,0 +1,9 @@
+#
+.DS_Store
+.com.apple.timemachine.supported
+Podfile.lock
+Pods/
+
+# Include only project data
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
