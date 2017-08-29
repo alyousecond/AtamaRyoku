@@ -38,15 +38,17 @@ class DescriptionPresenter {
     fileprivate let nextButtonEnableVar = Variable(true)
     
     fileprivate let maxPage = 3
-    fileprivate var currentPage = 1
+    //fileprivate 
+    var currentPage = 1
     
     func changePage() {
+        prevButtonEnableVar.value = true
+        nextButtonEnableVar.value = true
+        
         if (currentPage == 1) {
             prevButtonEnableVar.value = false
-            nextButtonEnableVar.value = true
         }
         else if (currentPage >= maxPage) {
-            prevButtonEnableVar.value = true
             nextButtonEnableVar.value = false
         }
         pageTextVar.value = String(format: "%d/%d", currentPage, maxPage)

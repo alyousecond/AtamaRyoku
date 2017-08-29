@@ -167,7 +167,7 @@
                                 </constraints>
                                 <state key="normal" title="まえ" image="left256x256"/>
                                 <connections>
-                                    <action selector="tapPrevButton:" destination="4WL-Eo-0Ej" eventType="touchUpInside" id="gOK-Oq-d6c"/>
+                                    <action selector="tapPrevButton:" destination="4WL-Eo-0Ej" eventType="touchUpInside" id="MQa-43-DXs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/3" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKM-31-gK1">
@@ -266,7 +266,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
-                                                                <action selector="tapNumberButton:" destination="Cy9-eg-60x" eventType="touchUpInside" id="zWc-5d-zbA"/>
+                                                                <action selector="tapNumberButton:" destination="Cy9-eg-60x" eventType="touchUpInside" id="Bvk-60-Iaf"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>

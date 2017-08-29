@@ -17,7 +17,7 @@ enum ListStatus {
     case error
 }
 
-protocol RankingPresenterInput {
+protocol RankingPresenterInput {    
     var listStatusTotal: Observable<ListStatus> { get }
     var listStatusToday: Observable<ListStatus> { get }
     
@@ -30,7 +30,7 @@ protocol RankingPresenterInput {
 
 class RankingPresenter {
     var useCase: RankingUseCaseInput!
-    
+
     fileprivate let listStatusTotalSubject = PublishSubject<ListStatus>()
     fileprivate let listStatusTodaySubject = PublishSubject<ListStatus>()
     fileprivate let todayRankingSubject = PublishSubject<Array<RankingViewModel>>()

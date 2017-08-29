@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class DescriptionViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
@@ -23,6 +24,21 @@ class DescriptionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        presenter.descriptionText
+            .bind(to: descriptionLabel.rx.text)
+            .disposed(by: disposeBag)
+        presenter.pageText
+            .bind(to: pageLabel.rx.text)
+            .disposed(by: disposeBag)
+        presenter.prevButtonEnable
+            .bind(to: prevButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        presenter.nextButtonEnable
+            .bind(to: nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        /*
         presenter.descriptionText
             .subscribe(
                 onNext: { [weak self] (text: String) in
@@ -30,6 +46,7 @@ class DescriptionViewController: UIViewController {
                 }
             )
             .disposed(by: disposeBag)
+        
         presenter.pageText
             .subscribe(
                 onNext: { [weak self] (text: String) in
@@ -37,6 +54,7 @@ class DescriptionViewController: UIViewController {
                 }
             )
             .disposed(by: disposeBag)
+        
         presenter.prevButtonEnable
             .subscribe(
                 onNext: { [weak self] (enabled: Bool) in
@@ -44,6 +62,7 @@ class DescriptionViewController: UIViewController {
                 }
             )
             .disposed(by: disposeBag)
+        
         presenter.nextButtonEnable
             .subscribe(
                 onNext: { [weak self] (enabled: Bool) in
@@ -51,6 +70,7 @@ class DescriptionViewController: UIViewController {
                 }
             )
             .disposed(by: disposeBag)
+        */
     }
 
     override func didReceiveMemoryWarning() {
