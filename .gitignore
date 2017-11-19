@@ -3,6 +3,7 @@
 .com.apple.timemachine.supported
 Podfile.lock
 Pods/
+Container/
 
 # Include only project data
 *.xcodeproj/*
