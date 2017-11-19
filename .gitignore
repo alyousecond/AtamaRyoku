@@ -4,6 +4,7 @@
 Podfile.lock
 Pods/
 Container/
+AtamaRyoku.xcworkspace/xcuserdata/
 
 # Include only project data
 *.xcodeproj/*
