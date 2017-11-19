@@ -68,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		00EA7CAD736CDABFB7E3D4E7 /* Pods-AtamaRyokuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtamaRyokuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AtamaRyokuUITests/Pods-AtamaRyokuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		097255AA1F78D71800A00E8F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		09F6DE891F47E95500323844 /* AtamaRyoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtamaRyoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F6DE8C1F47E95500323844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F6DE8E1F47E95500323844 /* TopPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPageViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +150,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09E2C4C61FC1573200C6C1C7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DEF81F4AFD5900323844 /* Functions.swift */,
+				09F6DEFE1F4E7E6F00323844 /* ArrayExtention.swift */,
+				09F6DF021F4E928000323844 /* IVWTime.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		09E2C4C71FC1579600C6C1C7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				09F6DEC21F48246900323844 /* AppBuilder.swift */,
+				09F6DEC41F482A2000323844 /* AppWireframe.swift */,
+				09F6DEC91F482C4300323844 /* AppRealmManager.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		09F6DE801F47E95500323844 = {
 			isa = PBXGroup;
 			children = (
@@ -174,8 +195,8 @@
 		09F6DE8B1F47E95500323844 /* AtamaRyoku */ = {
 			isa = PBXGroup;
 			children = (
-				09F6DEF71F4AFD4E00323844 /* Util */,
-				09F6DEBA1F48224100323844 /* Application */,
+				09E2C4C61FC1573200C6C1C7 /* Util */,
+				09E2C4C71FC1579600C6C1C7 /* Application */,
 				09F6DEBB1F48225100323844 /* Presentation */,
 				09F6DEBC1F48227800323844 /* Domain */,
 				09F6DEC61F482A5A00323844 /* Data */,
@@ -207,23 +228,13 @@
 			path = AtamaRyokuUITests;
 			sourceTree = "<group>";
 		};
-		09F6DEBA1F48224100323844 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				09F6DEC21F48246900323844 /* AppBuilder.swift */,
-				09F6DEC41F482A2000323844 /* AppWireframe.swift */,
-				09F6DEC91F482C4300323844 /* AppRealmManager.swift */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
 		09F6DEBB1F48225100323844 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				09F6DEBD1F48228F00323844 /* Presenter */,
 				09F6DEBE1F48229D00323844 /* UI */,
 			);
-			name = Presentation;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		09F6DEBC1F48227800323844 /* Domain */ = {
@@ -243,7 +254,7 @@
 				09F6DED51F48323600323844 /* AtamaRyokuPresenter.swift */,
 				09F6DED71F48324500323844 /* RankingPresenter.swift */,
 			);
-			name = Presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		09F6DEBE1F48229D00323844 /* UI */ = {
@@ -255,12 +266,13 @@
 				09F6DEE01F48372900323844 /* View */,
 				09F6DEDF1F4836FD00323844 /* ViewController */,
 			);
-			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		09F6DEBF1F4822E600323844 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				097255AA1F78D71800A00E8F /* README.md */,
 				09F6DEC01F4822F600323844 /* Podfile */,
 			);
 			name = Resource;
@@ -271,7 +283,7 @@
 			children = (
 				09F6DEC71F482A9C00323844 /* RankingRLM.swift */,
 			);
-			name = Data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		09F6DEDF1F4836FD00323844 /* ViewController */ = {
@@ -282,7 +294,7 @@
 				09F6DEDB1F48350D00323844 /* AtamaRyokuViewController.swift */,
 				09F6DEDD1F48352000323844 /* RankingViewController.swift */,
 			);
-			name = ViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		09F6DEE01F48372900323844 /* View */ = {
@@ -294,7 +306,7 @@
 				09F6DF001F4E8D3200323844 /* ResultView.swift */,
 				09F6DF0B1F500A3C00323844 /* CustomTextView.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		09F6DEED1F49136600323844 /* Button */ = {
@@ -303,7 +315,7 @@
 				09F6DEEB1F49135A00323844 /* NumberButton.swift */,
 				09F6DEF11F4ACADD00323844 /* ActionButton.swift */,
 			);
-			name = Button;
+			path = Button;
 			sourceTree = "<group>";
 		};
 		09F6DEEE1F4A7F3E00323844 /* Cell */ = {
@@ -313,17 +325,7 @@
 				09F6DF061F4ED4D200323844 /* ListTableViewCell.swift */,
 				09F6DEEF1F4A7F5F00323844 /* NumberCollectionViewCell.swift */,
 			);
-			name = Cell;
-			sourceTree = "<group>";
-		};
-		09F6DEF71F4AFD4E00323844 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				09F6DEF81F4AFD5900323844 /* Functions.swift */,
-				09F6DEFE1F4E7E6F00323844 /* ArrayExtention.swift */,
-				09F6DF021F4E928000323844 /* IVWTime.swift */,
-			);
-			name = Util;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		09F6DEFA1F4E7C6300323844 /* Entity */ = {
@@ -332,6 +334,7 @@
 				09F6DEFC1F4E7CE300323844 /* RankingEntity.swift */,
 			);
 			name = Entity;
+			path = Domain/Entity;
 			sourceTree = "<group>";
 		};
 		09F6DEFB1F4E7C7900323844 /* UseCase */ = {
@@ -342,6 +345,7 @@
 				09F6DECF1F48320700323844 /* RankingUseCase.swift */,
 			);
 			name = UseCase;
+			path = Domain/UseCase;
 			sourceTree = "<group>";
 		};
 		09F6DF081F4ED61000323844 /* ViewModel */ = {
@@ -349,7 +353,7 @@
 			children = (
 				09F6DF091F4ED62500323844 /* RankingViewModel.swift */,
 			);
-			name = ViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C0B77C2BB6BF0F61FA7D4224 /* Frameworks */ = {
@@ -453,6 +457,7 @@
 					09F6DE881F47E95500323844 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7M5HLRGL3M;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					09F6DE9C1F47E95600323844 = {
@@ -846,12 +851,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7M5HLRGL3M;
 				INFOPLIST_FILE = AtamaRyoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.ivalueworks.AtamaRyoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AtamaRyoku/AtamaRyoku-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -863,12 +871,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7M5HLRGL3M;
 				INFOPLIST_FILE = AtamaRyoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.ivalueworks.AtamaRyoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AtamaRyoku/AtamaRyoku-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

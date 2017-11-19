@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import AtamaRyoku
+//@testable import AtamaRyoku
 
 class AtamaRyokuTests: XCTestCase {
     
