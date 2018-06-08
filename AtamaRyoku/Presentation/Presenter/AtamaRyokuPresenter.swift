@@ -76,8 +76,10 @@ extension AtamaRyokuPresenter {
     }
 
     func endRecord() {
-        rankingEntity?.endTime = NSDate().timeIntervalSince1970
-        rankingEntity?.time += (rankingEntity?.endTime)! - (rankingEntity?.startTime)!
+        guard let startTime = rankingEntity?.startTime else { return assertionFailure() }
+        let endTime = NSDate().timeIntervalSince1970
+        rankingEntity?.endTime = endTime
+        rankingEntity?.time += endTime - startTime
         useCase.addRanking(entity: rankingEntity!)
     }
     
