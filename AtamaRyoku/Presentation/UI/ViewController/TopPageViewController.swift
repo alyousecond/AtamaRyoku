@@ -29,12 +29,12 @@ class TopPageViewController: UIViewController {
 // MARK: IBAction
 extension TopPageViewController {
     @IBAction func tapDescriptionButton(_ sender: AnyObject) { Log()
-        presenter?.tagDescriptionButton()
+        presenter?.tapDescriptionButton()
     }
     @IBAction func tapAtamaRyokuButton(_ sender: AnyObject) { Log()
         presenter?.tapAtamaRyokuButton()
     }
     @IBAction func tapRankingButton(_ sender: AnyObject) { Log()
-        presenter.tabRankingButton()
+        presenter.tapRankingButton()
     }
 }

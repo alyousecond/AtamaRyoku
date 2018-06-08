@@ -9,9 +9,9 @@
 import Foundation
 
 protocol TopPagePresenterInput {
-    func tagDescriptionButton()
+    func tapDescriptionButton()
     func tapAtamaRyokuButton()
-    func tabRankingButton()
+    func tapRankingButton()
 }
 
 struct TopPagePresenter {
@@ -23,13 +23,13 @@ struct TopPagePresenter {
 }
 
 extension TopPagePresenter: TopPagePresenterInput {
-    func tagDescriptionButton() { Log()
+    func tapDescriptionButton() { Log()
         wireframe.showDescription()
     }
     func tapAtamaRyokuButton() { Log()
         wireframe.showAtamaRyoku()
     }
-    func tabRankingButton() { Log()
+    func tapRankingButton() { Log()
         wireframe.showRanking()
     }
 }
