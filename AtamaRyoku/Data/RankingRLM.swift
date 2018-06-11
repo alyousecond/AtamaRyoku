@@ -9,12 +9,12 @@
 import RealmSwift
 
 class RankingRLM: Object {
-    dynamic var rankingKey: String = String(format: "%.10f", NSDate().timeIntervalSince1970)
-    dynamic var time: Double = 0.0
-    dynamic var rankingDate: Date = Date()
-    dynamic var startTime: Double = 0.0
-    dynamic var entTime: Double = 0.0
-    dynamic var day: String = ""
+    @objc dynamic var rankingKey: String = String(format: "%.10f", NSDate().timeIntervalSince1970)
+    @objc dynamic var time: Double = 0.0
+    @objc dynamic var rankingDate: Date = Date()
+    @objc dynamic var startTime: Double = 0.0
+    @objc dynamic var entTime: Double = 0.0
+    @objc dynamic var day: String = ""
 
     override static func primaryKey() -> String? {
         return "rankingKey"
