@@ -39,7 +39,7 @@ extension RankingUseCase : RankingUseCaseInput {
             ranking.startTime = entity.startTime
             ranking.entTime = entity.endTime
             ranking.day = dayString(date: entity.rankingDate)
-            realm.add(ranking, update: true)
+            realm.add(ranking, update: .all);
         }
     }
     

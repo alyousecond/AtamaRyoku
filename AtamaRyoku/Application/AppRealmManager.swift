@@ -35,7 +35,8 @@ struct AppRealmManager {
                         newObject!["day"] = dayString(date: oldObject!["rankingDate"] as! Date)
                     }
                 }
-        })
+            }
+        )
         
         // デフォルトRealmに新しい設定を適用します
         Realm.Configuration.defaultConfiguration = config

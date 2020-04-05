@@ -12,18 +12,21 @@ struct AppWireframe {
     func showDescription() {
         let viewController = rootViewController()
         let nextViewController = AppBuilder().buildDescriptionView()
+        nextViewController.modalPresentationStyle = .fullScreen
         viewController.present(nextViewController, animated: false, completion: nil)
     }
     
     func showAtamaRyoku() {
         let viewController = rootViewController()
         let nextViewController = AppBuilder().buildAtamaRyokuView()
+        nextViewController.modalPresentationStyle = .fullScreen
         viewController.present(nextViewController, animated: false, completion: nil)
     }
     
     func showRanking() {
         let viewController = rootViewController()
         let nextViewController = AppBuilder().buildRankingView()
+        nextViewController.modalPresentationStyle = .fullScreen
         viewController.present(nextViewController, animated: false, completion: nil)
     }
     
