@@ -3,22 +3,22 @@ inhibit_all_warnings!
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.3'
+platform :ios, '13.0'
 
 target 'AtamaRyoku' do
-    pod 'RealmSwift' #,'~> 3.7.1'
-    pod 'RxSwift' #,'~> 4.2.0'
-    pod 'RxCocoa' #,'~> 4.2.0'
+    pod 'RealmSwift'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 end
 
 target 'AtamaRyokuTests' do
-    pod 'RealmSwift' #,'~> 3.7.1'
-    pod 'RxSwift' #,'~> 4.2.0'
-    pod 'RxCocoa' #,'~> 4.2.0'
+    pod 'RealmSwift'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 end
 
 target 'AtamaRyokuUITests' do
-    pod 'RealmSwift' #,'~> 3.7.1'
-    pod 'RxSwift' #,'~> 4.2.0'
-    pod 'RxCocoa' #,'~> 4.2.0'
+    pod 'RealmSwift'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 end

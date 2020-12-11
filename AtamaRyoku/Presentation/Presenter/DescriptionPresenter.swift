@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 struct Descrption {
     let descrptions = [
@@ -32,27 +33,27 @@ protocol DescriptionPresenterInput {
 }
 
 class DescriptionPresenter {
-    fileprivate let descriptionTextVar = Variable<String>(Descrption().page(0))
-    fileprivate let pageTextVar = Variable<String>("1/3")
-    fileprivate let prevButtonEnableVar = Variable(false)
-    fileprivate let nextButtonEnableVar = Variable(true)
+    fileprivate let descriptionTextVar = BehaviorRelay<String>(value: Descrption().page(0))
+    fileprivate let pageTextVar = BehaviorRelay<String>(value: "1/3")
+    fileprivate let prevButtonEnableVar = BehaviorRelay(value: false)
+    fileprivate let nextButtonEnableVar = BehaviorRelay(value: true)
     
     fileprivate let maxPage = 3
     //fileprivate 
     var currentPage = 1
     
     func changePage() {
-        prevButtonEnableVar.value = true
-        nextButtonEnableVar.value = true
+        prevButtonEnableVar.accept(true)
+        nextButtonEnableVar.accept(true)
         
         if (currentPage == 1) {
-            prevButtonEnableVar.value = false
+            prevButtonEnableVar.accept(false)
         }
         else if (currentPage >= maxPage) {
-            nextButtonEnableVar.value = false
+            nextButtonEnableVar.accept(false)
         }
-        pageTextVar.value = String(format: "%d/%d", currentPage, maxPage)
-        descriptionTextVar.value = Descrption().page(currentPage - 1)
+        pageTextVar.accept(String(format: "%d/%d", currentPage, maxPage))
+        descriptionTextVar.accept(Descrption().page(currentPage - 1))
     }
 }
 
