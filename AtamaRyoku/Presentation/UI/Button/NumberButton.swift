@@ -53,13 +53,13 @@ extension NumberButton {
     func didChangeStatus() {
         switch buttonStatus {
         case .normal:
-            self.setTitle("\(number)", for: UIControlState.normal)
+            self.setTitle("\(number)", for: UIControl.State.normal)
             self.isHidden = false
         case .none:
-            self.setTitle("", for: UIControlState.normal)
+            self.setTitle("", for: UIControl.State.normal)
             self.isHidden = false
         case .done:
-            self.setTitle("-1", for: UIControlState.normal)
+            self.setTitle("-1", for: UIControl.State.normal)
             self.isHidden = true
         }
     }
