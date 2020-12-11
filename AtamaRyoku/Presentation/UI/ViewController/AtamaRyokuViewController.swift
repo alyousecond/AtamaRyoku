@@ -156,13 +156,13 @@ extension AtamaRyokuViewController {
     @IBAction func tapPauseButton(_ sender: AnyObject) {
         presenter.pauseRecord()
         
-        let alert: UIAlertController = UIAlertController(title: "かくにん", message: "テストをおわりますか？", preferredStyle:  UIAlertControllerStyle.alert)
+        let alert: UIAlertController = UIAlertController(title: "かくにん", message: "テストをおわりますか？", preferredStyle:  UIAlertController.Style.alert)
         
-        let defaultAction: UIAlertAction = UIAlertAction(title: "おわる", style: UIAlertActionStyle.default, handler:{ [weak self]
+        let defaultAction: UIAlertAction = UIAlertAction(title: "おわる", style: UIAlertAction.Style.default, handler:{ [weak self]
             (action: UIAlertAction!) -> Void in
             self?.dismiss(animated: false, completion: {})
         })
-        let cancelAction: UIAlertAction = UIAlertAction(title: "つづける", style: UIAlertActionStyle.cancel, handler:{ [weak self]
+        let cancelAction: UIAlertAction = UIAlertAction(title: "つづける", style: UIAlertAction.Style.cancel, handler:{ [weak self]
             (action: UIAlertAction!) -> Void in
             self?.presenter.restartRecord()
         })
